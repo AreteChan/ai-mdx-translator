@@ -1,0 +1,99 @@
+{
+  "name": "ai-mdx-translator",
+  "displayName": "AI Mdx Translator",
+  "description": "A VS Code extension helps you translate your markdown (.md) and MDX (.mdx) files with the power of AI.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "ai",
+    "mdx",
+    "md",
+    "markdown",
+    "translator",
+    "translation"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiMdxTranslator.Translate",
+        "title": "Translate Markdown Files"
+      }
+    ],
+    "configuration": {
+      "title": "AI Mdx Translator",
+      "type": "object",
+      "properties": {
+        "mdxTranslator.inputPath": {
+          "type": "string",
+          "description": "Input directory path containing .md and .mdx files to be translated. Defaults to the workspace root directory. Can be absolute or relative to workspace."
+        },
+        "mdxTranslator.outputPath": {
+          "type": "string",
+          "description": "Output directory path where translated files will be saved. Defaults to the workspace root directory. Directory will be created if it doesn't exist."
+        },
+        "mdxTranslator.apiKey": {
+          "type": "string",
+          "description": "API Key for the AI translation service. Obtain this key from the AI website."
+        },
+        "mdxTranslator.modelURL": {
+          "type": "string",
+          "default": "https://api.deepseek.ai/v1",
+          "description": "AI model URL for the translation service."
+        },
+        "mdxTranslator.modelName": {
+          "type": "string",
+          "default": "deepseek-chat",
+          "description": "AI model for the translation, e.g. 'deepseek-chat'."
+        },
+        "mdxTranslator.targetLanguage": {
+          "type": "string",
+          "enum": [
+            "en-GB",
+            "en-US",
+            "es-ES",
+            "fr-FR",
+            "de-DE",
+            "it-IT",
+            "ja-JP",
+            "ko-KR",
+            "pt-PT",
+            "ru-RU",
+            "zh-CN",
+            "zh-TW"
+          ],
+          "default": "en-GB",
+          "description": "Target language for the translation."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.21.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "axios": "^1.8.1"
+  }
+}
