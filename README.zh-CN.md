@@ -51,6 +51,9 @@
 2. 输入并选择 `Translate Markdown Files`
 3. 坐下来，看着您的文件在保留所有原始格式的情况下被翻译！
 
+## 灵感
+本项目灵感来源于 [ai-translate-readme](https://github.com/wukaipeng-dev/ai-translate-readme)，感谢原作者！
+
 ## 许可证
 
 此项目遵循 MIT 许可证进行共享。您可以自由查看 [LICENSE](LICENSE) 文件了解所有细节。

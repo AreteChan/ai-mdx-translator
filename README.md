@@ -16,7 +16,7 @@ Getting started is easy! Just follow these simple steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/ai-mdx-translator.git
+    git clone https://github.com/aretechan/ai-mdx-translator.git
     ```
 2. Navigate to the extension directory:
     ```sh
@@ -50,6 +50,10 @@ Using the extension is a breeze:
 1. Open the command palette with `Ctrl+Shift+P` (or `Cmd+Shift+P` if you're on a Mac)
 2. Type and select `Translate Markdown Files`
 3. Sit back and watch as your files get translated while maintaining all their original formatting!
+
+## Inspiration
+
+This project was inspired by [ai-translate-readme](https://github.com/wukaipeng-dev/ai-translate-readme). Thanks to the author!
 
 ## License
 

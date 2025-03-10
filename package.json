@@ -6,6 +6,10 @@
   "engines": {
     "vscode": "^1.60.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aretechan/ai-mdx-translator.git"
+  },
   "categories": [
     "Other"
   ],
